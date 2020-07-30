@@ -35,3 +35,24 @@ query {
   }
 }
 ```
+
+```
+query {
+  schedule {
+    greeting
+  }
+}
+```
+```
+# simulate slow query to downstream service that provides "talks"
+query {
+  s1: schedule {
+    greeting
+    talks
+  }
+  s2: schedule {
+    greeting
+    talks
+  }
+}
+```
