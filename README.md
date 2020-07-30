@@ -24,7 +24,7 @@ query {
     name
     location
   }
-  people {
+  people(nameStartsWith:"D") {
     name
     ... on Speaker {
       talks

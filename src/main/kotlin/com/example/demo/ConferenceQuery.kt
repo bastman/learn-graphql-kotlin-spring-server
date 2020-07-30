@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component
 class ConferenceQuery : Query {
 
     fun conference() = Conference(name = "GOTO Chicago", location = "virtual")
-    fun people():List<People> = listOf(
+    fun people(nameStartsWith:String?):List<People> = listOf(
             Speaker(name="Dariusz", talks = listOf("Bootiful GraphQL")),
             Attendee(name="Jane", ticketType = TicketType.CONFERENCE)
-    )
+    ).filter{ it.name.startsWith(nameStartsWith?:"")}
 
 }
 
