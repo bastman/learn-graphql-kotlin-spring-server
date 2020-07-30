@@ -1,5 +1,6 @@
 # kotlin-graphql-learn
-getting started with graphql spring-webflux (expedia libs)
+getting started with graphql spring-webflux
+ (expedia: graphql-kotlin-spring-server)
 
 ## docs
 
