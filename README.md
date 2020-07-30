@@ -24,5 +24,14 @@ query {
     name
     location
   }
+  people {
+    name
+    ... on Speaker {
+      talks
+    }
+    ... on Attendee {
+      ticketType
+    }
+  }
 }
 ```
